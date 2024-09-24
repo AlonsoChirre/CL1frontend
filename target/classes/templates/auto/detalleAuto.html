@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Detalle Auto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+  <div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+      <h2 class="card-title text-center"><i class="fas fa-car"></i> Detalle del Auto</h2>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <strong>Marca:</strong>
+          <span th:text="${autoModel.autoMarca()}"></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <strong>Modelo:</strong>
+          <span th:text="${autoModel.autoModelo()}"></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <strong>Nro Asientos:</strong>
+          <span th:text="${autoModel.autoNroAsientos()}"></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <strong>Precio:</strong>
+          <span th:text="${autoModel.autoPrecio()}"></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <strong>Color:</strong>
+          <span th:text="${autoModel.autoColor()}"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="card-footer text-center">
+      <a href="/auto/buscar" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Regresar</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
